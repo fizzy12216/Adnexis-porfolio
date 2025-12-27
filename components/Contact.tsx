@@ -1,75 +1,85 @@
 
 import React from 'react';
-import { Phone, Mail, MessageCircle, ArrowRight, MapPin } from 'lucide-react';
+import { Mail, MessageCircle, ArrowRight, MapPin, PhoneCall } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const whatsappUrl = "https://wa.me/923430418776";
   const email = "adnexismarketingagency@gmail.com";
 
   return (
-    <section id="contact" className="py-24 bg-adnexis-dark-blue relative overflow-hidden">
-      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-adnexis-teal/20 rounded-full blur-[100px]"></div>
+    <section id="contact" className="py-32 bg-white relative overflow-hidden">
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-adnexis-teal/5 rounded-full blur-[120px] pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-white rounded-[4rem] shadow-3xl overflow-hidden grid lg:grid-cols-2">
-          <div className="p-10 lg:p-24 flex flex-col justify-center">
-            <span className="text-adnexis-teal font-black uppercase tracking-[0.2em] text-xs mb-6">Connect with us</span>
-            <h2 className="text-adnexis-dark-blue text-4xl lg:text-6xl font-black mb-8 leading-tight">
-              Let’s start your <br />growth story.
-            </h2>
-            <p className="text-adnexis-gray-blue text-xl mb-12 font-medium leading-relaxed">
-              Skip the long forms. Connect directly with our experts on WhatsApp or Email to discuss your local business scaling.
-            </p>
-            
+        <div className="grid lg:grid-cols-5 gap-16">
+          <div className="lg:col-span-3 space-y-12">
             <div className="space-y-6">
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-6 bg-adnexis-green/10 rounded-3xl hover:bg-adnexis-green hover:text-white transition-all group">
-                <div className="flex items-center gap-5">
-                  <div className="bg-white p-3 rounded-xl shadow-sm group-hover:bg-white group-hover:text-adnexis-green transition-colors">
-                    <MessageCircle className="w-6 h-6" />
-                  </div>
-                  <span className="font-bold text-lg">WhatsApp Direct</span>
+              <span className="text-adnexis-teal font-black uppercase tracking-[0.2em] text-xs">Let's Connect</span>
+              <h2 className="text-adnexis-primary text-6xl lg:text-7xl font-black tracking-tighter leading-none">
+                Scale your vision <br />with <span className="text-transparent bg-clip-text bg-gradient-to-r from-adnexis-teal to-adnexis-accent">Precision.</span>
+              </h2>
+              <p className="text-xl text-adnexis-muted font-medium max-w-xl">
+                The fastest way to grow is to speak with experts who know the local Karachi market inside and out. Choose your preferred channel below.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-6">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="p-10 rounded-[2.5rem] bg-adnexis-accent/10 border border-adnexis-accent/20 group hover:bg-adnexis-accent transition-all duration-500">
+                <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                  <MessageCircle className="w-8 h-8 text-adnexis-accent" />
                 </div>
-                <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <h4 className="text-2xl font-black text-adnexis-dark mb-2 group-hover:text-adnexis-dark">WhatsApp</h4>
+                <p className="text-adnexis-muted group-hover:text-adnexis-dark/70 font-medium mb-6">Instant consultation & fast response.</p>
+                <div className="flex items-center gap-2 font-black text-adnexis-dark">
+                  Message Now <ArrowRight className="w-4 h-4" />
+                </div>
               </a>
 
-              <a href={`mailto:${email}`} className="flex items-center justify-between p-6 bg-adnexis-bg rounded-3xl hover:bg-adnexis-dark-blue hover:text-white transition-all group">
-                <div className="flex items-center gap-5">
-                  <div className="bg-white p-3 rounded-xl shadow-sm group-hover:bg-white group-hover:text-adnexis-dark-blue transition-colors">
-                    <Mail className="w-6 h-6" />
-                  </div>
-                  <span className="font-bold text-lg truncate">Email Our Agency</span>
+              <a href={`mailto:${email}`} className="p-10 rounded-[2.5rem] bg-adnexis-primary/5 border border-adnexis-primary/10 group hover:bg-adnexis-primary transition-all duration-500">
+                <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                  <Mail className="w-8 h-8 text-adnexis-primary" />
                 </div>
-                <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <h4 className="text-2xl font-black text-adnexis-dark mb-2 group-hover:text-white">Email</h4>
+                <p className="text-adnexis-muted group-hover:text-white/70 font-medium mb-6">Send us your project details for review.</p>
+                <div className="flex items-center gap-2 font-black text-adnexis-dark group-hover:text-white">
+                  Send Email <ArrowRight className="w-4 h-4" />
+                </div>
               </a>
             </div>
           </div>
 
-          <div className="relative bg-adnexis-bg/50 p-10 lg:p-24 flex flex-col justify-center border-l border-adnexis-bg">
-            <div className="space-y-12">
-              <div>
-                <div className="flex items-center gap-4 mb-4">
-                  <MapPin className="text-adnexis-teal w-6 h-6" />
-                  <h4 className="font-black text-2xl text-adnexis-dark-blue">Presence</h4>
+          <div className="lg:col-span-2">
+            <div className="bg-adnexis-dark rounded-[3rem] p-12 text-white shadow-premium space-y-12 h-full flex flex-col justify-between">
+              <div className="space-y-10">
+                <div className="flex items-start gap-6">
+                  <div className="p-4 bg-white/10 rounded-2xl text-adnexis-accent">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h5 className="text-lg font-black uppercase tracking-widest text-adnexis-accent mb-2">Our Base</h5>
+                    <p className="text-slate-300 text-lg font-medium">Karachi District, Serving Clifton, DHA, & major hubs.</p>
+                  </div>
                 </div>
-                <p className="text-adnexis-gray-blue text-lg font-medium leading-relaxed">
-                  Based in Karachi’s business district, serving Clifton, DHA, Gulshan, and all major local hubs.
-                </p>
+
+                <div className="flex items-start gap-6">
+                  <div className="p-4 bg-white/10 rounded-2xl text-adnexis-accent">
+                    <PhoneCall className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h5 className="text-lg font-black uppercase tracking-widest text-adnexis-accent mb-2">Direct Line</h5>
+                    <p className="text-3xl font-black text-white">0343 0418776</p>
+                  </div>
+                </div>
               </div>
 
-              <div className="p-10 bg-white rounded-[3rem] shadow-xl border border-adnexis-bg">
-                <p className="text-adnexis-dark-blue font-black text-3xl mb-2">0343 0418776</p>
-                <p className="text-adnexis-teal font-bold uppercase tracking-widest text-xs">Direct Office Line</p>
-              </div>
-              
-              <div className="pt-8 border-t border-adnexis-bg">
-                <a 
-                  href="https://share.google/Y2qh3timMTocqk9xW"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-adnexis-dark-blue font-black text-lg hover:text-adnexis-teal transition-colors flex items-center gap-3"
-                >
-                  Find us on Google Maps <ArrowRight className="w-5 h-5" />
-                </a>
+              <div className="p-8 rounded-[2rem] bg-white/5 border border-white/10 space-y-4">
+                <p className="text-sm font-bold text-slate-400">Trusted by local leaders across Karachi.</p>
+                <div className="flex -space-x-3">
+                    {[1,2,3,4].map(i => (
+                        <div key={i} className="w-10 h-10 rounded-full bg-slate-700 border-2 border-adnexis-dark flex items-center justify-center text-[10px] font-bold">U{i}</div>
+                    ))}
+                    <div className="w-10 h-10 rounded-full bg-adnexis-teal border-2 border-adnexis-dark flex items-center justify-center text-[10px] font-bold">+50</div>
+                </div>
               </div>
             </div>
           </div>

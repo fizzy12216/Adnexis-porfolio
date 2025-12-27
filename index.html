@@ -7,25 +7,43 @@
     <title>AdNexis – Local Business Growth | Digital Marketing Karachi</title>
     <meta name="description" content="Boost your local business growth in Karachi with Adnexis. Expert Google Maps marketing, Local SEO, social media advertising, and lead generation services to increase calls, leads, and customers.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              'adnexis-bg': '#F6F6F7',
-              'adnexis-dark-blue': '#0D3B66',
-              'adnexis-teal': '#0D806B',
-              'adnexis-green': '#0FBA71',
-              'adnexis-gray-blue': '#6F889C',
+              'adnexis-bg': '#FAFAFB',
+              'adnexis-dark': '#05192D',
+              'adnexis-primary': '#0D3B66',
+              'adnexis-accent': '#00F29D',
+              'adnexis-teal': '#00A896',
+              'adnexis-muted': '#64748B',
             },
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+              'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E\")",
+            },
+            boxShadow: {
+              'premium': '0 20px 50px -12px rgba(5, 25, 45, 0.12)',
+              'glow': '0 0 20px rgba(0, 242, 157, 0.3)',
+            }
           }
         }
       }
     </script>
+    <style>
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      .animate-float { animation: float 6s ease-in-out infinite; }
+      .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+    </style>
 <script type="importmap">
 {
   "imports": {
@@ -39,7 +57,7 @@
 }
 </script>
 </head>
-<body class="bg-adnexis-bg text-adnexis-gray-blue font-sans antialiased">
+<body class="bg-adnexis-bg text-adnexis-dark font-sans antialiased overflow-x-hidden">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
 </body>
