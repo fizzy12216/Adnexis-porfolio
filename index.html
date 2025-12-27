@@ -1,11 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdNexis – Local Business Growth | Digital Marketing Karachi</title>
-    <meta name="description" content="Boost your local business growth in Karachi with Adnexis. Expert Google Maps marketing, Local SEO, social media advertising, and lead generation services to increase calls, leads, and customers.">
+    <title>AdNexis | Local Business Growth Experts in Karachi | GMB & Local SEO</title>
+    <meta name="description" content="Boost your calls, leads, and customers in Karachi. Expert Google Maps marketing, Local SEO Services, and Social Media Advertising tailored for local business growth.">
+    <meta name="keywords" content="Local Business Growth Karachi, Google Maps Marketing, Local SEO Karachi, Digital Marketing Agency Karachi, Lead Generation Services Pakistan, AEO Karachi, GEO Marketing Pakistan">
+    
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.adnexis.pk" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.adnexis.pk/">
+    <meta property="og:title" content="AdNexis | Local Business Growth Experts in Karachi">
+    <meta property="og:description" content="Dominating Google Maps and Local SEO for Karachi businesses. Get more calls and leads today.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200">
+
+    <!-- JSON-LD Structured Data (Comprehensive AEO/GEO Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "AdNexis",
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200",
+          "@id": "https://www.adnexis.pk",
+          "url": "https://www.adnexis.pk",
+          "telephone": "+923430418776",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Main Clifton Road",
+            "addressLocality": "Karachi",
+            "addressRegion": "Sindh",
+            "postalCode": "75600",
+            "addressCountry": "PK"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 24.8607,
+            "longitude": 67.0011
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "20:00"
+          },
+          "sameAs": ["https://www.facebook.com/adnexis"],
+          "priceRange": "$$",
+          "description": "Adnexis is a performance-driven marketing agency in Karachi specializing in Google Maps Marketing, Local SEO, and lead generation for local businesses."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How does AdNexis improve local business rankings in Karachi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AdNexis utilizes advanced Google Business Profile (GMB) optimization, local citation building, and targeted local SEO strategies specifically designed for the Karachi market including areas like Clifton, DHA, and Saddar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the average ROI for local businesses with AdNexis?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our clients typically see an average of 3.5x Return on Ad Spend (ROAS) through our integrated lead generation and local search marketing funnels."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
@@ -24,12 +95,11 @@
               sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             },
             backgroundImage: {
-              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
               'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E\")",
             },
             boxShadow: {
-              'premium': '0 20px 50px -12px rgba(5, 25, 45, 0.12)',
-              'glow': '0 0 20px rgba(0, 242, 157, 0.3)',
+              'premium': '0 25px 60px -15px rgba(5, 25, 45, 0.15)',
+              'glow': '0 0 35px rgba(0, 242, 157, 0.45)',
             }
           }
         }
@@ -37,12 +107,38 @@
     </script>
     <style>
       @keyframes float {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
-        100% { transform: translateY(0px); }
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+      }
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes spin-reverse {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
       }
       .animate-float { animation: float 6s ease-in-out infinite; }
-      .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+      .animate-spin-slow { animation: spin-slow 30s linear infinite; }
+      .animate-spin-reverse { animation: spin-reverse 30s linear infinite; }
+      .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(14px); border: 1px solid rgba(255, 255, 255, 0.5); }
+      
+      .orbit-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .orbiting-wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        height: 0;
+      }
     </style>
 <script type="importmap">
 {

@@ -1,77 +1,62 @@
 
 import React from 'react';
-import { Calendar, ArrowRight } from 'lucide-react';
+import { Calendar, ArrowRight, BookOpen } from 'lucide-react';
 
 const blogs = [
   {
     title: "How to Boost Local Business Growth in Karachi",
-    excerpt: "Learn the core strategies that are driving real traffic to physical shops across the city...",
-    date: "Feb 15, 2024"
+    excerpt: "The authoritative framework for dominating neighborhood demand using localized AEO strategies.",
+    date: "Mar 01, 2026"
   },
   {
-    title: "Top Google Maps Marketing Tips for Karachi Businesses",
-    excerpt: "Visibility in the map pack is the key to local dominance. Here is how you get it...",
-    date: "Feb 10, 2024"
+    title: "Google Maps Marketing for Karachi Dominance",
+    excerpt: "Technical steps to secure your position in the local 3-pack and drive automated customer calls.",
+    date: "Feb 22, 2026"
   },
   {
-    title: "Local SEO Strategies That Actually Work in Karachi",
-    excerpt: "Stop wasting time on generic SEO. Focus on what local customers are actually searching for...",
-    date: "Feb 05, 2024"
+    title: "Local SEO: Targeting Clifton & DHA specific queries",
+    excerpt: "Beyond keyword stuffing: How to align your business with hyper-local search intent in Karachi.",
+    date: "Feb 15, 2026"
   },
   {
-    title: "Lead Generation Funnel Best Practices for Small Businesses",
-    excerpt: "Turn your social media followers into high-paying customers with optimized funnels...",
-    date: "Jan 28, 2024"
+    title: "Generative Engine Optimization (GEO) for 2026",
+    excerpt: "How to prepare your business to be the primary answer in AI-driven search results.",
+    date: "Feb 08, 2026"
   }
 ];
 
 const Blog: React.FC = () => {
   return (
-    <section id="insights" className="py-24 bg-white">
+    <section id="insights" className="py-24 bg-white border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
-            <div className="inline-block bg-adnexis-teal/10 text-adnexis-teal px-4 py-1 rounded-full text-sm font-bold mb-4">
-              Resources
-            </div>
-            <h2 className="text-adnexis-dark-blue text-4xl lg:text-5xl font-bold mb-4">Latest Insights & Tips</h2>
-            <p className="text-adnexis-gray-blue text-lg">
-              Actionable advice to help you scale your business in the Karachi market.
-            </p>
+            <span className="text-adnexis-teal font-black uppercase tracking-[0.2em] text-xs">AEO Growth Intelligence</span>
+            <h2 className="text-adnexis-primary text-5xl font-black mt-2 tracking-tight flex items-center gap-3">
+              Growth Intelligence <BookOpen className="text-adnexis-accent" />
+            </h2>
+            <p className="text-adnexis-muted text-lg font-medium mt-4">Data-backed strategies to help you scale your business in the evolving Karachi market.</p>
           </div>
-          <a 
-            href="https://wa.me/923430418776"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-adnexis-teal font-bold flex items-center gap-2 hover:gap-3 transition-all"
-          >
-            Consult Our Experts <ArrowRight className="w-5 h-5" />
+          <a href="https://wa.me/923430418776" className="text-adnexis-teal font-extrabold flex items-center gap-2 group">
+            Access Full Library <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-all" />
           </a>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {blogs.map((blog, index) => (
-            <div key={index} className="flex flex-col h-full bg-adnexis-bg/30 p-8 rounded-3xl border border-adnexis-bg hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all group">
-              <div className="flex items-center gap-2 text-adnexis-teal text-xs font-bold uppercase tracking-widest mb-6">
-                <Calendar className="w-4 h-4" />
-                {blog.date}
+            <div key={index} className="flex flex-col h-full bg-adnexis-bg/40 p-10 rounded-[2.5rem] border border-transparent hover:border-adnexis-teal/20 hover:bg-white hover:shadow-xl transition-all group">
+              <div className="flex items-center gap-2 text-adnexis-teal text-xs font-black uppercase tracking-widest mb-6">
+                <Calendar className="w-4 h-4" /> {blog.date}
               </div>
-              <h3 className="text-adnexis-dark-blue text-xl font-bold mb-4 leading-tight group-hover:text-adnexis-teal transition-colors">
+              <h3 className="text-adnexis-dark text-xl font-black mb-4 leading-tight group-hover:text-adnexis-primary transition-colors">
                 {blog.title}
               </h3>
-              <p className="text-adnexis-gray-blue text-sm leading-relaxed mb-6 flex-grow">
+              <p className="text-adnexis-muted text-sm leading-relaxed mb-8 flex-grow font-medium">
                 {blog.excerpt}
               </p>
-              <div className="pt-6 border-t border-adnexis-bg/50 mt-auto">
-                <a 
-                  href="https://wa.me/923430418776"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-adnexis-dark-blue font-bold text-sm inline-flex items-center gap-2"
-                >
-                  Read More <ArrowRight className="w-4 h-4 opacity-50" />
-                </a>
-              </div>
+              <a href="https://wa.me/923430418776" className="text-adnexis-primary font-black text-sm inline-flex items-center gap-2">
+                Analyze Insight <ArrowRight className="w-4 h-4 opacity-50" />
+              </a>
             </div>
           ))}
         </div>
